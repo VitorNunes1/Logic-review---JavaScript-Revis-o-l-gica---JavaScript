@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Função Tabuada</title>
+    </head>
+
+    <body>
+
+
+        <h1>Tabuada Function</h1>
+
+        <button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+        <button onclick="limparTabuada()">Limpar Tabuada</button>
+
+        <div id="output"></div>
+
+        <script>
+            //Sempre que eu for utilizar o DOM, sempre começar com document. (Interferência entre o HTML e JS) 
+            const output = document.getElementById("output")
+
+            function mostrarTabuada(){
+                //innetHTML para puxar comando HTML à variável.
+                //output.innerHTML = "valor qualquer <br> pula linha"
+                //Pedir para o usuário digitar um número
+                let n = parseFloat(prompt("Digite um número"))
+                
+                let msg = ""
+                for(let i = 0; i <= 1000; i++){
+                    if (i === 11) {
+                        break //return "Valor retornado." sai diretamente da função, daí ela para inteira.
+                    }
+                    msg += `${n} x ${i} = ${(n * i)} <br>`
+                }
+                
+                //let i = 0;
+                //while(i <= 1000){
+                //    msg += `${n} x ${i} = ${(n * i)} <br>`
+                //    i++
+                //}
+
+                output.innerHTML = msg
+
+
+                //Mostrar a tabuada desse número de 1 a 1000
+
+                //Toda informação que vem da interface do usuário é string
+            }
+            
+            function limparTabuada(){
+                output.innerHTML = ""
+                
+            }
+            
+
+
+        </script>
+    </body>
+</html>

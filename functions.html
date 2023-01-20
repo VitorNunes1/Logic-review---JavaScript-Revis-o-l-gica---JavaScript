@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions</title>
+    </head>
+
+    <body>
+        <script>
+
+            //Declaração de função
+            function Hello(){
+                document.write("Hello world of function expression")
+            }
+
+            Hello()
+
+            //Expressão de função
+            const Hello2 = function(){
+                console.log("Hello world of function expression")
+            }
+            Hello2()
+
+            // arrow functions
+
+            const Hello3 = () => {
+                console.log("Hello world of function expression")
+            }
+            Hello3()
+
+            //Retorno de valores
+            function obtemDiaSemana(){
+                return new Date().getDay() //return 6
+            }          //será o "6" 
+            let dia = obtemDiaSemana()
+            console.log(dia)
+
+            //ou
+
+            console.log(obtemDiaSemana())
+
+            //Reaproveitando funções 
+            function somar(n1 = 0, n2 = 0){ //Se eu não passar valor para o parâmetro, ele entenderá como zero!
+                //let _n1 = n1 || 0
+                //let _n2 = n2 || 0
+                //return _n1 + _n2
+                return n1 + n2
+            }
+
+            let soma = somar(3, 5, 8)
+            console.log(soma)
+            console.log(somar(10, 4))
+            console.log(somar(10))
+            alert(somar(2, 3))
+
+
+        </script>
+    </body>
+</html>

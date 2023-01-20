@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LoopDocument</title>
+    </head>
+
+    <body>
+
+        <script>
+            let numero = prompt("Write a number: ")
+
+            /*document.write(`1 x ${numero} = ${(1 * numero)} <br>`)
+            document.write(`2 x ${numero} = ${(2 * numero)} <br>`)
+            document.write(`3 x ${numero} = ${(3 * numero)} <br>`)
+            document.write(`4 x ${numero} = ${(4 * numero)} <br>`)
+            document.write(`5 x ${numero} = ${(5 * numero)} <br>`)*/
+
+            //ou
+
+            let indice = 11
+            while(indice <= 10){
+                indice++
+                if(indice === 5){
+                    continue
+                }
+                document.write(`${indice} x ${numero} = ${(indice * numero)} <br>`)
+            }
+
+            document.write("Saiu do loop while.")
+
+            indice = 0
+            do{
+                if(indice > 10){
+                    alert("Número maior que 10")
+                    break
+                }
+                document.write(`${indice} x ${numero} = ${(indice * numero)} <br>`)
+                indice++
+            } while(indice <= 10)
+            
+
+            for(let j = 0; j <= 10; j++){
+                if(j === 5){
+                    continue
+                }
+                document.write(`${numero} x ${j} = ${(j * numero)} <br>`)
+            }
+            document.write("Saiu do loop while.")
+
+        </script>
+    </body>
+</html>
